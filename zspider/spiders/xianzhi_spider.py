@@ -63,7 +63,7 @@ class XianzhiSpider(scrapy.spiders.Spider):
             # a后链
             follow_links = self.extract_follow_link(bs, response)
             for link in follow_links:
-                yield scrapy.Request(link, callback = self.parse,)
+                yield scrapy.Request(link, callback = self.parse, )
 
             item = items.XianzhiItem()
             item['url'] = response.url

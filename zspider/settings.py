@@ -46,15 +46,15 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-
-}
+#SPIDER_MIDDLEWARES = {
+#
+#}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-
-}
+#DOWNLOADER_MIDDLEWARES = {
+#
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -92,4 +92,6 @@ ITEM_PIPELINES = {
 # 闲置根目录
 XIANZHI_WEBROOT = '/Users/liangdong/Documents/webroot/2.smzdm.com'
 
-DUPEFILTER_DEBUG = True
+#DUPEFILTER_DEBUG = True
+#SCHEDULER_DEBUG = True
+SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
