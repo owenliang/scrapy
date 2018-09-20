@@ -30,7 +30,7 @@ class XianzhiSpider(scrapy.spiders.Spider):
                 if attr in link_tag.attrs:
                     link = response.urljoin(link_tag.attrs[attr])
                     link = link.strip()
-                    link_tag.attrs[attr] = util.build_resource_path(self.main_domain, link) # 外链本地化路径
+                    link_tag.attrs[attr] = util.build_resource_path(self.main_domain, link) # 外链本地化URL
                     resource_links.append(link)  # 需要下载的js和css链接
         return self.filter_invalid_link(resource_links, ['.css', '.js'])
 

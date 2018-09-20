@@ -11,7 +11,7 @@ import os
 class XianzhiPipeline(object):
     def process_item(self, item, spider):
         # 构建文件路径
-        resource_path = util.build_resource_path('2.smzdm.com', item['url'])
+        resource_path = util.build_resource_path('2.smzdm.com', item['url'], True)
 
         # 拼接到文件系统目录
         resource_path = spider.settings['XIANZHI_WEBROOT'] + resource_path

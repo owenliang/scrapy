@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c872d9e7-0a17-491f-b5ee-48d7d0afc625" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/zspider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zspider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zspider/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zspider$util.coverage" NAME="util Coverage Results" MODIFIED="1537264166406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zspider/spiders" />
+    <SUITE FILE_PATH="coverage/zspider$util.coverage" NAME="util Coverage Results" MODIFIED="1537420902110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zspider/spiders" />
     <SUITE FILE_PATH="coverage/zspider$xianzhi_spider.coverage" NAME="xianzhi_spider Coverage Results" MODIFIED="1537321639246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zspider/spiders" />
     <SUITE FILE_PATH="coverage/zspider$test.coverage" NAME="test Coverage Results" MODIFIED="1537326323396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zspider/spiders" />
   </component>
@@ -25,8 +26,8 @@
       <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zspider/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="278">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="e#25#58#0" expanded="true" />
               </folding>
@@ -34,13 +35,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xianzhi_spider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zspider/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xianzhi_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="401">
+              <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zspider/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+              <folding>
+                <element signature="e#194#218#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +102,7 @@
       <find>print(</find>
       <find>self.mqs</find>
       <find>mqclass</find>
+      <find>build_resource_path</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/zspider</dir>
@@ -96,11 +119,8 @@
         <option value="$PROJECT_DIR$/zspider/items.py" />
         <option value="$PROJECT_DIR$/zspider/spiders/util.py" />
         <option value="$PROJECT_DIR$/zspider/spiders/test.py" />
-        <option value="$PROJECT_DIR$/zspider/pipelines.py" />
-        <option value="$PROJECT_DIR$/zspider/util.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/dupefilters.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/utils/reqser.py" />
-        <option value="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/spidermiddlewares/httperror.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/downloadermiddlewares/decompression.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/downloadermiddlewares/retry.py" />
@@ -111,6 +131,9 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/queuelib/pqueue.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/queuelib/queue.py" />
         <option value="$PROJECT_DIR$/zspider/settings.py" />
+        <option value="$PROJECT_DIR$/zspider/util.py" />
+        <option value="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" />
+        <option value="$PROJECT_DIR$/zspider/pipelines.py" />
       </list>
     </option>
   </component>
@@ -124,6 +147,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
@@ -183,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.util">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zspider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,9 +272,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.util" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.xianzhi_spider" />
-        <item itemvalue="Python.util" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +292,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="4" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -276,7 +300,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290735" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2257721" />
       <window_info anchor="bottom" id="Terminal" weight="0.3290735" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.19753747" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -302,7 +326,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -500,16 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zspider/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
-          <folding>
-            <element signature="e#194#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -626,30 +640,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zspider/settings.py">
+    <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        <state relative-caret-position="401">
+          <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zspider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+          <folding>
+            <element signature="e#194#218#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zspider/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        <state relative-caret-position="278">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#25#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
+    <entry file="file://$PROJECT_DIR$/zspider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="566">
+          <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
         </state>
       </provider>
     </entry>
