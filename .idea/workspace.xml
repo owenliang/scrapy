@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c872d9e7-0a17-491f-b5ee-48d7d0afc625" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/zspider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zspider/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/zspider/util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,20 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zspider/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
+            <state relative-caret-position="1728">
               <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xianzhi_spider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="xianzhi_spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
+            <state relative-caret-position="274">
+              <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
               </folding>
@@ -132,8 +130,8 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/queuelib/queue.py" />
         <option value="$PROJECT_DIR$/zspider/settings.py" />
         <option value="$PROJECT_DIR$/zspider/util.py" />
-        <option value="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" />
         <option value="$PROJECT_DIR$/zspider/pipelines.py" />
+        <option value="$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py" />
       </list>
     </option>
   </component>
@@ -640,13 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
+    <entry file="file://$PROJECT_DIR$/zspider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1728">
+          <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -670,10 +665,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zspider/settings.py">
+    <entry file="file://$PROJECT_DIR$/zspider/spiders/xianzhi_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+        <state relative-caret-position="274">
+          <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

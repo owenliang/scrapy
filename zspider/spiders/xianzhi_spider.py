@@ -14,7 +14,6 @@ class XianzhiSpider(scrapy.spiders.Spider):
     # 初始URL
     start_urls = [
         'https://2.smzdm.com/',
-       # 'https://2.smzdm.com/resources/js/main.1.0.js?v=2018042401'
     ]
 
     # 主域名
@@ -41,29 +40,51 @@ class XianzhiSpider(scrapy.spiders.Spider):
         follow_tags = bs.select('a')
         for follow_tag in follow_tags:
             if 'href' in follow_tag.attrs:
-                href = response.urljoin(follow_tag.attrs['href'])
-                href = href.strip()
-                url_info = urlparse(href)
+                link = response.urljoin(follow_tag.attrs['href'])
+                link = link.strip()
+                url_info = urlparse(link)
                 if url_info.netloc == self.main_domain:
-                    follow_links.append(href)   # 只follow主域的后链
+                    follow_tag.attrs['href'] = util.build_resource_path(self.main_domain, link)  # 链接本地化
+                    follow_links.append(link)   # 只follow主域的后链
         return self.filter_invalid_link(follow_links)
+
+    # 提取图片
+    def extract_img_link(self, bs, response):
+        img_links = []
+
+        img_tags = bs.select('img')
+        for img_tag in img_tags:
+            if 'src' in img_tag.attrs:
+                link = response.urljoin(img_tag.attrs['src'])
+                link = link.strip()
+                url_info = urlparse(link)
+                if url_info.netloc == self.main_domain:
+                    img_tag.attrs['src'] = util.build_resource_path(self.main_domain, link)  # 链接本地化
+                    img_links.append(link)   # 只下载主站下的图片
+        return self.filter_invalid_link(img_links)
 
     # 处理HTML, CSS, JS
     def parse(self, response):
-        #print(response.url)
-        if not self.filter_ext(response.url, ['.css', '.js']):
+        resp_type = response.meta['type'] if response.meta and 'type' in response.meta else 'normal'
+
+        # 普通页面
+        if resp_type == 'normal':
             bs = BeautifulSoup(response.body, 'lxml')
 
             # js, css资源
             resource_links = self.extract_resource(bs, response)
             for link in resource_links:
-                #print("download:" + link)
-                yield scrapy.Request(link, callback = self.parse, ) #dont_filter = True
+                yield scrapy.Request(link, callback = self.parse, meta = {'type': 'resource'})
 
             # a后链
             follow_links = self.extract_follow_link(bs, response)
             for link in follow_links:
-                yield scrapy.Request(link, callback = self.parse, )
+                yield scrapy.Request(link, callback = self.parse, meta = {'type': 'normal'})
+
+            # 图片
+            img_links = self.extract_img_link(bs, response)
+            for link in img_links:
+                yield scrapy.Request(link, callback = self.parse, meta = {'type': 'img'})
 
             item = items.XianzhiItem()
             item['url'] = response.url
@@ -74,13 +95,6 @@ class XianzhiSpider(scrapy.spiders.Spider):
             item['content'] = response.body # 原始的css和js
 
         yield item
-
-    # 过滤后缀
-    def filter_ext(self, link, ext):
-        res = urlparse(link)
-        if os.path.splitext(res.path)[-1] not in ext:
-            return False
-        return True
 
     # 无效链接过滤
     def filter_invalid_link(self, links, ext = None):
