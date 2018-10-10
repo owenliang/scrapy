@@ -66,6 +66,7 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'zspider.pipelines.XianzhiPipeline': 1,
+    'zspider.pipelines.HomepageListPipeline': 2,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,3 +96,7 @@ XIANZHI_WEBROOT = '/Users/liangdong/Documents/webroot/2.smzdm.com'
 #DUPEFILTER_DEBUG = True
 #SCHEDULER_DEBUG = True
 SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
+
+# 首页列表抓取页数
+HOMEPAGE_PAGE_LIMIT = 20
+HOMEPAGE_SAVE_PATH = '/Users/liangdong/Documents/webroot/homepage-api.smzdm.com'

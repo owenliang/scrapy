@@ -33,6 +33,29 @@ def build_resource_path(main_domain, url, disk = False):
 
     return resource_path
 
+# 生成所有参数枚举
+def build_enum(kvs, all_enum, start = 0, cur_enum = None):
+    if cur_enum is None:
+        cur_enum = {}
+
+    if len(cur_enum) == len(kvs):
+        all_enum.append(cur_enum.copy())
+        return
+
+    kv = kvs[start]
+    k = kv['name']
+    v_arr = kv['value']
+    for v in v_arr:
+        cur_enum[k] = v
+        build_enum(kvs, all_enum, start + 1, cur_enum)
+        del cur_enum[k]
+
+
 if __name__ == '__main__':
-    path = build_resource_path('2.smzdm.com', 'https://2.smzdm.com/a/b?a=1', True)
-    print(path)
+    #path = build_resource_path('2.smzdm.com', 'https://2.smzdm.com/a/b?a=1', True)
+    #print(path)
+
+    kvs = [{'name': 'f', 'value': ['iphone', 'android']}, {'name': 'v', 'value': [9.0, 9.1]}]
+    ret = []
+    build_enum(kvs, ret)
+    print(ret)

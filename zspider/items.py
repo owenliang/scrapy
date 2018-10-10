@@ -13,3 +13,8 @@ class XianzhiItem(scrapy.Item):
     # name = scrapy.Field()
     url = scrapy.Field()
     content = scrapy.Field()
+
+# 好价列表页
+class HomepageListItem(scrapy.Item):
+    args = scrapy.Field()
+    content = scrapy.Field()
