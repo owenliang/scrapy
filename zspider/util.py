@@ -51,6 +51,15 @@ def build_enum(kvs, all_enum, start = 0, cur_enum = None):
         del cur_enum[k]
 
 
+# 写文件
+def write_file(filename, content):
+    # 创建目录
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+
+    # 保存到磁盘
+    with open(filename, 'wb') as fp:
+        fp.write(content)
+
 if __name__ == '__main__':
     #path = build_resource_path('2.smzdm.com', 'https://2.smzdm.com/a/b?a=1', True)
     #print(path)

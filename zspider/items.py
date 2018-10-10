@@ -7,7 +7,7 @@
 
 import scrapy
 
-
+# 闲置
 class XianzhiItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -18,3 +18,9 @@ class XianzhiItem(scrapy.Item):
 class HomepageListItem(scrapy.Item):
     args = scrapy.Field()
     content = scrapy.Field()
+
+# 好价详情页
+class HaojiaDetailItem(scrapy.Item):
+    args = scrapy.Field()
+    content = scrapy.Field()
+    id = scrapy.Field()

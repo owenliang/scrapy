@@ -67,6 +67,7 @@ ROBOTSTXT_OBEY = False
 ITEM_PIPELINES = {
     'zspider.pipelines.XianzhiPipeline': 1,
     'zspider.pipelines.HomepageListPipeline': 2,
+    'zspider.pipelines.HaojiaDetailPipeline': 3,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -99,4 +100,7 @@ SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 
 # 首页列表抓取页数
 HOMEPAGE_PAGE_LIMIT = 20
+# 首页列表保存路径
 HOMEPAGE_SAVE_PATH = '/Users/liangdong/Documents/webroot/homepage-api.smzdm.com'
+# 好价详情保存路径
+HAOJIA_SAVE_PATH = '/Users/liangdong/Documents/webroot/haojia_detail'
