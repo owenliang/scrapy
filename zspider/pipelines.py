@@ -9,6 +9,7 @@ from zspider import util
 from zspider.items import XianzhiItem
 from zspider.items import HomepageListItem
 from zspider.items import HaojiaDetailItem
+from zspider.items import HaojiaListItem
 from scrapy.exceptions import DropItem
 import os
 
@@ -39,7 +40,7 @@ class HomepageListPipeline(object):
             return item
 
         # 写入磁盘
-        save_path = spider.settings['HOMEPAGE_SAVE_PATH'] + '/{}/{}/{}/index.html'.format(item['args']['f'], item['args']['v'], item['args']['page'])
+        save_path = spider.settings['HOMEPAGE_SAVE_PATH'] + '/{}/{}/{}/index.html'.format(item['args']['page'], item['args']['f'], item['args']['v'])
 
         util.write_file(save_path, item['content'])
 
@@ -54,7 +55,22 @@ class HaojiaDetailPipeline(object):
             return item
 
         # 写入磁盘
-        save_path = spider.settings['HAOJIA_SAVE_PATH'] + '/{}/{}/{}/{}/index.html'.format(item['id'], item['args']['f'], item['args']['v'], item['args']['weixin'])
+        save_path = spider.settings['HAOJIA_DETAIL_SAVE_PATH'] + '/{}/{}/{}/{}/index.html'.format(item['id'], item['args']['f'], item['args']['v'], item['args']['weixin'])
+
+        util.write_file(save_path, item['content'])
+
+        # 被成功处理
+        raise DropItem()
+
+# 好价列表页
+class HaojiaListPipeline(object):
+    def process_item(self, item, spider):
+        # 继续后传
+        if not isinstance(item, HaojiaListItem):
+            return item
+
+        # 写入磁盘
+        save_path = spider.settings['HAOJIA_LIST_SAVE_PATH'] + '/{}/{}/{}/index.html'.format(item['args']['page'], item['args']['f'], item['args']['v'])
 
         util.write_file(save_path, item['content'])
 

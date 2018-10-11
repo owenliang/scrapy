@@ -37,7 +37,7 @@ class HomepageSpider(scrapy.spiders.Spider):
     # 第一个请求不做处理, 触发所有链接的爬取
     def parse(self, response):
         # 首页列表的前N页
-        for page in range(0, settings.HOMEPAGE_PAGE_LIMIT + 1):
+        for page in range(1, settings.HOMEPAGE_PAGE_LIMIT + 1):
             # 参数组合
             for args in self.homepage_enum:
                 args = args.copy()
@@ -51,10 +51,12 @@ class HomepageSpider(scrapy.spiders.Spider):
         if int(list_data['error_code']) != 0:
             return
 
-        # 对好价文章发起抓取
+        # 对首页文章发起抓取
         for article in list_data['data']['rows']:
+            if 'article_channel_id' not in article:
+                print(article)
             if int(article['article_channel_id']) in [1, 2, 3, 5, 21, 28]:
-                yield from self.haojia_spider.build_detail_request(article['article_id'])
+                yield from self.haojia_spider.build_detail_request(article['article_id'], {'channel_id': article['article_channel_id']})
 
         # 产生列表Item
         item = items.HomepageListItem()
@@ -62,11 +64,6 @@ class HomepageSpider(scrapy.spiders.Spider):
         item['content'] = response.body
 
         yield item
-
-    # 好价详情
-    def handle_haojia_detail(self, response):
-        print(response.body)
-        pass
 
     # 错误处理
     def handle_error(self, failure):

@@ -24,3 +24,8 @@ class HaojiaDetailItem(scrapy.Item):
     args = scrapy.Field()
     content = scrapy.Field()
     id = scrapy.Field()
+
+# 好价列表页
+class HaojiaListItem(scrapy.Item):
+    args = scrapy.Field()
+    content = scrapy.Field()
